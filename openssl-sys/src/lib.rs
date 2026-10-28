@@ -45,6 +45,8 @@ mod aws_lc {
 
     use std::ffi::{c_char, c_int, c_long, c_uint, c_void};
 
+    pub const SSL_OP_IGNORE_UNEXPECTED_EOF: u32 = 0x00000080;
+
     pub fn init() {
         unsafe { CRYPTO_library_init() }
     }
